@@ -17,9 +17,18 @@ public class User {
 
     @Column(unique = true, nullable = false)
     private String username;
+    
+    @Column(nullable = false)
+    private String firstName;
+    
+    @Column(nullable = false)
+    private String lastName;
 
     @Column(nullable = false)
     private String password;
+    
+    @Column
+    private String roles;
 
     // Getters and setters
 
@@ -46,5 +55,31 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getRoles() {
+		return roles;
+	}
+
+	public void setRoles(String roles) {
+		this.roles = roles;
+	}
+    
+    
 }
 
